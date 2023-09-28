@@ -10,7 +10,7 @@ type Props = {
     }
 };
 function Property({ params: { id } }: Props) {
-    const [property, setProperty] = useState<property>();
+    const [property, setProperty] = useState<Property>();
     const url = "https://dockingapi20230918192206.azurewebsites.net/api/Products";
     useEffect(() => {
         const fetchData = async () => {
