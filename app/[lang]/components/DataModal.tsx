@@ -1,10 +1,10 @@
 import { Dispatch, FormEvent, SetStateAction } from "react";
 
 interface ModalProps {
-    property: property
+    property: Property
     setShowModal: (showModal: boolean) => void;
     handleSubmit: (event: FormEvent<HTMLFormElement>) => void;
-    setProperty: Dispatch<SetStateAction<property>>
+    setProperty: Dispatch<SetStateAction<Property>>
     loading: boolean
     response: {
         message: string,

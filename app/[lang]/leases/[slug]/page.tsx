@@ -31,7 +31,7 @@ function Leases({ params: { slug } }: {params: {slug: string}}) {
     addedDate: '2023-08-16T14:19:03.138Z'
   };
   const [property, setProperty] = useState(initialPropertyState);
-  const [propertyData, setPropertyData] = useState<property[]>()
+  const [propertyData, setPropertyData] = useState<Property[]>()
   const url: string = "https://dockingapi20230918192206.azurewebsites.net/api/Products";
   useEffect(() => {
     const fetchData = async () => {
@@ -82,7 +82,7 @@ function Leases({ params: { slug } }: {params: {slug: string}}) {
     }, 2000)
   };
 
-  const availableTemplate = (property: property) => {
+  const availableTemplate = (property: Property) => {
     return (
       <tr>{property.available ? "Yes" : "No"}</tr>
     )
@@ -90,7 +90,7 @@ function Leases({ params: { slug } }: {params: {slug: string}}) {
   const [filter, setFilter] = useState({
     global: { value: slug, matchMode: FilterMatchMode.CONTAINS }
   });
-  const addressTemplate = (property: property) => {
+  const addressTemplate = (property: Property) => {
     return (
       <Link className='hover:underline hover:text-black' href={`/property/${property.id}`}>{property.address}
       </Link>

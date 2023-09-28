@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Docking Web',
-  description: 'Docking rentals and leasing'
+  description: 'Docking rentals and leasing '
 }
 
 export async function generateStaticParams() {

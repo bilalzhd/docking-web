@@ -17,7 +17,7 @@ export const getSinglePropertyData = async (url: string, id: any) => {
   const data = await response.json();
   return data;
 }
-export const updatePropertyAvailability = async (id: any, property: property | undefined) => {
+export const updatePropertyAvailability = async (id: any, property: Property | undefined) => {
   if (property === undefined) {
     return;
   }
