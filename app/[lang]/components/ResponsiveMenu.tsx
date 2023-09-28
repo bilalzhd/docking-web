@@ -32,7 +32,10 @@ export default function ResponsiveMenu({ menuItems }: ResponsiveMenuProps) {
                             <Link
                                 href={menuItem.href}
                                 id={String(index)}
-                                onClick={(e) => setActive(e.target.id)}
+                                onClick={(e) => {
+                                    const target = e.target as HTMLLinkElement
+                                    setActive(Number(target.id))
+                                }}
                                 style={
                                     active === index ? { color: "rgb(255, 230, 200)", fontWeight: "bold" } : {}
                                 }>
